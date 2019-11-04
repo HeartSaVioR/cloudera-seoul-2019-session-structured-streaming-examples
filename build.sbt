@@ -2,7 +2,7 @@ name := "cloudera-seoul-2019-session-structured-streaming-examples"
 
 version := "0.1"
 
-scalaVersion := "2.12.10"
+scalaVersion := "2.11.12"
 
 resolvers += Resolver.mavenLocal
 resolvers ++= List("Local Maven Repository" at "file:///" + Path.userHome.absolutePath + "/.m2/repository")
@@ -10,10 +10,10 @@ resolvers ++= List("Local Maven Repository" at "file:///" + Path.userHome.absolu
 // scallop is MIT licensed
 libraryDependencies += "org.rogach" %% "scallop" % "3.1.2"
 
-val scalaVersionForMaven = "2.12"
+val scalaVersionForMaven = "2.11"
 val sparkVersion = "2.4.4"
-//val scopeForSparkArtifacts = "provided"
-val scopeForSparkArtifacts = "compile"
+val scopeForSparkArtifacts = "provided"
+//val scopeForSparkArtifacts = "compile"
 
 libraryDependencies += "org.apache.spark" % s"spark-streaming_${scalaVersionForMaven}" % sparkVersion % scopeForSparkArtifacts
 libraryDependencies += "org.apache.spark" % s"spark-sql_${scalaVersionForMaven}" % sparkVersion % scopeForSparkArtifacts
